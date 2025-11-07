@@ -1,0 +1,60 @@
+/*Palette: 
+    Website background  #2a2a2a
+    Majorette blue:     #6E44FF
+    Tropical indigo:    #B892FF
+    Lavender pink:      #FFC2E2
+    Baker-Miller pink:  #FF90B3
+    Light coral:        #EF7A85
+*/
+body {
+  background-color: white;
+}
+h1 {
+  color: #EF7A85;
+}
+
+
+/*Navbar background*/
+.topnav {
+  background-color: #6E44FF;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #FFC2E2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #B892FF;
+  color: #FFC2E2;
+}
+
+.topnav a.active {
+  background-color: #FFC2E2;
+  color: #6E44FF;
+}
+
+.container {
+  display: flex;
+  background-color: white;
+}
+
+.container div {
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #FFC2E2;
+  color: #6E44FF;
+}
