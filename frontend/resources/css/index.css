@@ -1,60 +1,164 @@
-/*Palette: 
-    Website background  #2a2a2a
-    Majorette blue:     #6E44FF
-    Tropical indigo:    #B892FF
-    Lavender pink:      #FFC2E2
-    Baker-Miller pink:  #FF90B3
-    Light coral:        #EF7A85
-*/
-body {
-  background-color: white;
-}
-h1 {
-  color: #EF7A85;
-}
-
-
-/*Navbar background*/
-.topnav {
-  background-color: #6E44FF;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #FFC2E2;
-  text-align: center;
-  padding: 14px 16px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
-  font-size: 17px;
+  list-style: none;
 }
 
-.topnav a:hover {
-  background-color: #B892FF;
-  color: #FFC2E2;
+:root {
+  --main-text-color: rgb(92, 218, 155);
 }
 
-.topnav a.active {
-  background-color: #FFC2E2;
-  color: #6E44FF;
-}
+/* ---------- Header ----------*/
 
-.container {
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 12%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
   display: flex;
-  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100; 
+  /* 
+    The z-index specifies:
+      - The stack level of the box in the current stacking context.
+      - Whether the box establishes a local stacking context.
+  */
 }
 
-.container div {
-  background-color: white;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
+.logo{
+  color: white;
+  width: 50px;
+  transition: 0.2s ease;
 }
 
-footer {
+.logo:hover{
+  transform: scale(1.1);
+}
+
+.navbar a{
+  font-size: 18px;
+  color: white;
+  font-weight: 500; /*boldness del font*/
+  margin: 0 30px; /*margin-top, margin-right, margin-bottom, margin-left*/
+  border-bottom: 3px solid transparent;
+  transition: 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active{
+  color: var(--main-text-color);
+  border-bottom: 3px solid var(--main-text-color);
+  transform: scale(1.1);
+}
+
+.contact{
+  padding: 10px 28px;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  border: 2px solid transparent;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contact:hover{
+  background-color: var(--main-text-color);
+  color: white;
+  transition: 0.2s ease;
+}
+
+/* ---------- Home ----------*/
+
+.home{
+  width: 100%;
+  min-height: 100vh; /*minimum height 100% of the viewport height*/
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 7em; /*dimensione in proporzione al carattere dell'elemento genitore. Usato per design responsive.*/
+  padding: 30px 12% 0;
+}
+
+.img-box img{
+  border-radius: 50%;
+  width: 200px;
+}
+
+.home-content{
+  max-width: 800px;
+}
+
+.home-content h3{
+  font-size: 50px;
+}
+
+.home-content h1{
+  font-size: 50px;
+}
+
+.home-content span{
+  font-size: 50px;
+  color: var(--main-text-color);
+  line-height: 1.2;
+}
+
+.home-content p{
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 25px 0 30px;
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--main-text-color);
+}
+
+
+/* ---------- Footer ----------*/
+.footer{
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer span{
+  font-size: 10px;
+  line-height: 1.5;
+  color: white;
+}
+
+.outer{
+  background-color: var(--main-text-color);
+  border-radius: 50px;
+  padding: 10px 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+}
+
+.logos {
+  display: flex;
+  gap: 15px;
+}
+
+.logos img {
+  width: 50px;
+}
+
+.author {
   text-align: center;
-  padding: 3px;
-  background-color: #FFC2E2;
-  color: #6E44FF;
 }
